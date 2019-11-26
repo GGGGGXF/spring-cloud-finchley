@@ -1,6 +1,6 @@
 package com.example.eurekaconsumerfeign.controller;
 
-import com.example.eurekaconsumerfeign.Service.HelloRemote;
+import com.example.eurekaconsumerfeign.service.HelloRemote;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
