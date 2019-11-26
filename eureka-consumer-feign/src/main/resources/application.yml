@@ -1,6 +1,6 @@
 spring:
   application:
-    name: eureka-consumer
+    name: eureka-consumer-feign-hystrix
 eureka:
   client:
     service-url:
@@ -8,3 +8,12 @@ eureka:
 server:
   port: 9002 #IP 9000 9001 9002
 
+feign:
+  hystrix:
+    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
