@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/GGGGGXF/spring-cloud-finchley
+          search-paths: config-repo # git仓库地址下的相对地址，可以配置多个，用,分割。
+          username: GGGGGXF
+          password: guan19960822
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+server:
+  port: 12000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
